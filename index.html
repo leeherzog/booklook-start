@@ -14,6 +14,7 @@
       </div>
 
       <div class="book">
+          
       </div>
 
       <form>
@@ -28,6 +29,17 @@
 
     </div>
   </div>
+
+  <script id="book-template" type="text/x-handlebars-template">
+    {{#each items}}
+     
+    <h1>{{volumeInfo.title}}</h1>
+    <p>{{volumeInfo.description}}</p>
+    <h3>Written by: {{volumeInfo.authors}}</h3>
+    <img src= {{volumeInfo.imageLinks.smallThumbnail}}>
+      {{/each}}
+    
+    </script>
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
